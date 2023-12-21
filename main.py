@@ -32,3 +32,12 @@ my_list = [1, 5, 7, 90, 5.5]
 my_iterator = MyIterator(my_list)
 print(my_iterator)
 print(*my_iterator)
+
+#генератори
+def my_generator(data):
+    for item in data:
+        yield item
+#використання
+my_list = [1, 5, 7, 90, 5.5]
+my_gen = my_generator(my_list)
+print(*my_gen)
