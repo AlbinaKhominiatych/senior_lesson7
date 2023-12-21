@@ -41,3 +41,15 @@ def my_generator(data):
 my_list = [1, 5, 7, 90, 5.5]
 my_gen = my_generator(my_list)
 print(*my_gen)
+
+#замикання
+def outer_function():
+    x = 10
+    def inner_function(y):
+        return x + y
+    return inner_function
+#використання
+closure = outer_function()
+print(closure(15))
+print(closure(100))
+print(closure(5))
