@@ -53,3 +53,17 @@ closure = outer_function()
 print(closure(15))
 print(closure(100))
 print(closure(5))
+#декоратори
+def my_decorator(func):
+    def wrapper():
+        print("Починаємо обгортку")
+        func()
+        print("закінчуємо обгортку")
+    return wrapper
+#Використання
+@my_decorator
+def my_func():
+    print("Hello!")
+# say_hello = my_decorator(my_func)
+# say_hello()
+my_func()
